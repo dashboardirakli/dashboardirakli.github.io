@@ -1,0 +1,36 @@
+.content__body {
+    margin-left: 5rem;
+    margin-top: 56px;
+    padding: 20px 2px 20px 20px;
+}
+
+.datails{
+    max-height: calc(100vh - 57px - 20px); 
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.table__container {
+    max-width: calc(100vw - 5rem);
+    max-height: calc(100vh - 57px - 90px); 
+    overflow-x: auto;
+    overflow-y: auto;
+
+    .header__title,
+    .header__filter {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+}
+
+#assets {
+    tr {
+        background: #fff;
+
+        &:hover {
+            background: #888;
+        }
+    }
+}

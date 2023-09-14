@@ -1,0 +1,42 @@
+.sideBar {
+    width: 280px;
+    height: calc(100vh - 57px);
+    background-color: #212529;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+
+    &:not(.show) {
+        width: 4.5rem;
+        overflow: hidden;
+        transition: width 0.3s ease;
+
+        .bi {
+            margin-top: 10px;
+        }
+        .nav-link {
+            display: none;
+        }
+    }
+
+    .nav {
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+
+            .bi {
+                font-size: 22px;
+                color: $primery__color;
+                margin-left: 1.5rem;
+            }
+
+            .nav-link {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+}
