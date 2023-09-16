@@ -1,0 +1,56 @@
+.library__table {
+    .header__title th:first-child {
+        width: 34px;
+    }
+
+    .header__title th:nth-child(2) {
+        width: 130px;
+    }
+
+    .header__title th:not(:first-child):not(:nth-child(2)) {
+        flex-grow: 1;
+        min-width: 350px;
+    }
+
+    .actions__column {
+
+        .actions__container {
+           
+            .export__pdf {
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+            
+                &:before {
+                    content: attr(data-tooltip);
+                    position: absolute;
+                    top: -30px;
+                    left: 70%;
+                    transform: translateX(-50%);
+                    background-color: $dark2;
+                    color: #fff;
+                    padding: 5px 10px;
+                    border-radius: 4px;
+                    white-space: nowrap;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    z-index: 1;
+                    visibility: hidden; /* Hide the tooltip initially */
+                }
+            
+                &:hover:before {
+                    opacity: 1;
+                    visibility: visible; /* Show the tooltip on hover */
+                }
+            }
+            
+    
+            .bi {
+                font-size: 18px;
+                color: $primery__color;
+                padding-left: 15px;
+            }
+        }
+        
+    }
+}
