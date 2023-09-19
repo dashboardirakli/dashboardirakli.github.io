@@ -1,0 +1,183 @@
+/*============================================================
+	PR Requisition New
+==============================================================*/
+.form__content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    fieldset {
+        margin: 10px 2%;
+        width: 45%;
+
+        .field__label {
+            padding-bottom: 2px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .field__input,
+        .field__select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid $dark2;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+
+            &:focus {
+                border-color: $primery__color;
+                outline: none;
+            }
+        }
+
+    }
+
+    .btn_container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding-right: 4%;
+        margin-top: 20px;
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 12px;
+
+            &.btn__add {
+                background-color: $primery__color;
+                transition: 0.8s ease;
+                border: none;
+                color: $light;
+
+                &:hover {
+                    background-color: $hover__color;
+                }
+            }
+
+            &.btn__clear {
+                border: 1px solid $dark2;
+                color: $dark2;
+                transition: 0.8s ease;
+
+                &:hover {
+                    background-color: $hover__color;
+                    color: $light;
+                }
+            }
+        }
+    }
+}
+
+
+#newpartRequisition_wrapper {
+    margin-top: 50px;
+    width: 99%;
+    border-top: 2px solid $primery__color;
+
+    th {
+        width: 300px;
+    }
+
+}
+
+
+.form__content__bottom {
+    margin: 90px 0 150px;
+
+    fieldset {
+        margin: 25px 3%;
+        width: 92%;
+
+        .field__label {
+            padding-bottom: 2px;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .field__input,
+        .field__select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid $dark2;
+            border-radius: 4px;
+            transition: border-color 0.2s;
+
+            &:focus {
+                border-color: $primery__color;
+                outline: none;
+            }
+        }
+
+        .only__label {
+            width: 100%;
+            background: $primery__color;
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+                color: $light;
+            }
+        }
+
+        .notify__hint {
+            margin-top: 5px;
+            font-size: 12px;
+            color: $dark2;
+        }
+
+    }
+}
+
+.tox-editor-container {
+
+    .tox-menubar,
+    .tox-statusbar__branding,
+    .tox-promotion {
+        display: none;
+    }
+}
+
+.btn__for__newRequisitions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $footer__color;
+    padding: 20px 40px;
+    z-index: 1;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+        padding: 5px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-left: 12px;
+
+        &.btn__add {
+            background-color: $primery__color;
+            transition: 0.8s ease;
+            border: none;
+            color: #fff;
+
+            &:hover {
+                background-color: $hover__color;
+            }
+        }
+
+        &.btn__clear {
+            border: 1px solid $dark2;
+            color: $dark2;
+            transition: 0.8s ease;
+
+            &:hover {
+                background-color: $hover__color;
+                color: $light;
+            }
+        }
+    }
+}

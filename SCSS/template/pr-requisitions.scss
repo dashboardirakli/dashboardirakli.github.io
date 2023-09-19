@@ -1,29 +1,18 @@
 /*============================================================
-	assets table
+	PR Requisitions list
 ==============================================================*/
 
-.assets__table {
+.prRequsitions__table {
 
-    .title {
-        border-color: transparent;
-    }
-
-    .table {
-        th {
-            &:first-child {
-                width: 40px;
-            }
-
-            &:not(:first-child) {
-                width: 150px;
-            }
+    .header__title {
+        .title {
+            border-color: transparent;
         }
     }
 
     tr {
         vertical-align: middle;
     }
-
 
     th,
     td {
@@ -36,12 +25,5 @@
             // box-sizing: border-box;
         }
     }
-}
 
-
-// pagination for all table
-.active>.page-link,
-.page-link.active {
-    border: none;
-    background-color: $primery__color;
 }

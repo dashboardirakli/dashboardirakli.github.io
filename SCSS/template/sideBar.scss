@@ -1,3 +1,7 @@
+/*============================================================
+	sidebar
+==============================================================*/
+
 .sideBar {
     width: 220px;
     height: calc(100vh - 57px);
@@ -13,6 +17,7 @@
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     padding-bottom: 30px;
+
 }
 
 .sideBar::-webkit-scrollbar {
@@ -48,6 +53,14 @@
             color: #fff;
             font-size: 12px;
             padding: 12px 2px 12px 20px;
+        }
+
+        &:hover {
+            background: $black;
+        }
+
+        &:active {
+            background: $primery__color;
         }
     }
 }

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="topBar" class="topBar">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/dashboard.html">Maintance</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    </ul>
+
+                    <div class="d-flex user__menu">
+                        <li>
+                            <form class="searchForm" role="search">
+                                <i class="bi-search"></i>
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </form>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-bell-fill"></i><span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    25+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-people-fill"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-gear-fill"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/index.html">LogOut</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="sideBar" class="sideBar" onmouseenter="expandSidebar()" onmouseleave="collapseSidebar()">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link active" aria-current="page" href="/dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Reports</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Sheduler</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Aproval Groups</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Assets</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Assigments</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Interactive Plans</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/PR-Requisitions.html">PR Requisitions</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Parts</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Po Purchase Orders</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Shipping Addresses</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">PM Plans</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Supplier</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Tax Rates</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Work Orders</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Work Order Requests</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/library.html">Task Library</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="content" class="content__body">
+        <div class="container-fluid datails">
+            <div class="breadcrumb__container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" id="breadcrumbs"></ol>
+                </nav>
+            </div>
+
+            <div class="list__container">
+                <div class="datails__container">
+                    <div class="item__detail__header">
+                        <div class="item__Info">
+                            <div class="item__description__info">
+                                <div class="item__description__title">
+                                    <div class="assets__serialnumber">
+                                        <span class="number-label">Number:</span>
+                                        <div class="number__value">
+                                            <div class="label-widget">New</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__Date">
+                                <ul class="item__Date__list">
+                                    <li class="createdOn">
+                                        <div class="txt__label">Created On</div>
+                                    </li>
+                                    <li class="updatedOn">
+                                        <div class="txt__label">Updated On</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="details__menu">
+                        <ul class="nav nav-pills mb-3">
+                            <li>
+                                <a class="nav-link active" data-bs-toggle="pill" href="#PartRequisitionItems">Part Requisition Items</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content forLibrary">
+                            <div class="tab-pane fade show active" id="PartRequisitionItems">
+                                <div class="row generalInfo__container">
+                                    <div class="col-sm-12 form">
+                                        <div class="form__content">
+                                            <fieldset>
+                                                <label class="field__label">Short Text</label>
+                                                <select name="" id="" class="field__select"></select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Quantity</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Location</label>
+                                                <select name="" id="" class="field__select"></select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Work Order</label>
+                                                <select name="" id="" class="field__select"></select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Required Date</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">MMID</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">UOM</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Comment</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <div class="btn_container">
+                                                <button type="button" class="btn btn__clear">Crear</button>
+                                                <button type="submit" class="btn btn__add">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-12">
+                                        <table id="newpartRequisition" class="newpartRequisition display">
+                                            <thead>
+                                                <tr>
+                                                    <th>(Short Text) MMID</th>
+                                                    <th>Short Text</th>
+                                                    <th>(Short Text) Full Description</th>
+                                                    <th>(Short Text) Certificate Information</th>
+                                                    <th>Quantity</th>
+                                                    <th>Status</th>
+                                                    <th>(Short Text) GL Account</th>
+                                                    <th>Part Supplier</th>
+                                                    <th>(Short Text) Manufacturer</th>
+                                                    <th>(Short Text) Manufacturer Part number</th>
+                                                    <th>(Short Text) Unit of Measure</th>
+                                                    <th>Estimated Cost</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>400000003000340</td>
+                                                    <td><a href="">Core inspection programme</a></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>108000</td>
+                                                    <td>Approved</td>
+                                                    <td>51001013</td>
+                                                    <td><a href="">Oceaneering International Service</a></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="">other</a></td>
+                                                    <td>$ 0.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+
+                                    <div class="col-sm-12">
+                                        <div class="form__content__bottom">
+                                            <fieldset>
+                                                <label class="field__label">Requisition Title</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Detailed Description</label>
+                                                <textarea name="textarea" id="newDetailedDescription" class="field__input"></textarea>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Notify Approver Group Owner?</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">Yes</label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2" checked>
+                                                    <label class="form-check-label" for="flexRadioDefault2">No</label>
+                                                  </div>
+                                                  <p class="notify__hint">Hint: NOTE: Please note this will only notify the Approvers you must "Sumbit" the requisition to allow the approver to action this PR</p>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Requested By</label>
+                                                <div class="only__label">
+                                                    <a href="" class="link-record">Giorgi Giorgadze</a>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Approval Group</label>
+                                                <select name="" id="" class="field__select"></select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Approval Cost Center</label>
+                                                <select name="" id="" class="field__select"></select>
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">SAP Code</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">SAP Code Description</label>
+                                                <input type="text" class="field__input">
+                                            </fieldset>
+                                            <fieldset>
+                                                <label class="field__label">Comments</label>
+                                                <input type="text" class="field__input">
+                                                <p class="notify__hint">Hint: The maximum length is 1000 characters</p>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- End PartRequisitionItems Content -->
+
+                            <div class="btn__for__newRequisitions">
+                                <button type="button" class="btn btn__clear">Cancel</button>
+                                <button type="button" class="btn btn__add">Save</button>
+                                <button type="submit" class="btn btn__add">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/scroller/2.0.6/js/dataTables.scroller.min.js"></script>
+    <script src="./plugins/tinymce/tinymce.min.js"></script>
+    <script src="./js/PR_Requisitions.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

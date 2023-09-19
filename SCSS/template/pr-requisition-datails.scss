@@ -1,0 +1,48 @@
+/*============================================================
+	PR Requisitions details
+==============================================================*/
+.sub__header__menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 27px;
+
+    .new__reqisition {
+        font-size: 14px;
+        padding: 4px 7px;
+        background: $primery__color;
+        border: none;
+        text-decoration: none;
+        color: $light;
+    }
+}
+
+.partRequisition {
+
+
+    tr {
+        vertical-align: middle;
+
+        td,
+        th {
+            padding: 5px 20px;
+            text-align: left;
+            width: 250px;
+        }
+    }
+
+}
+
+
+.requisition__datails {
+    margin-top: 40px;
+}
+
+.Requisition__textera {
+    width: 80%;
+    height: 150px;
+}
+    
+
+    

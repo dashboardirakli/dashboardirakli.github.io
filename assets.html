@@ -105,10 +105,10 @@
     </section>
 
     <section id="sideBar" class="sideBar" onmouseenter="expandSidebar()" onmouseleave="collapseSidebar()">
-        <ul class="nav flex-column">
+        <ul class="nav navbar-nav flex-column">
             <li class="nav-item">
                 <i class="bi bi-table"></i>
-                <a class="nav-link active" aria-current="page" href="/dashboard.html">Dashboard</a>
+                <a class="nav-link" aria-current="page" href="/dashboard.html">Dashboard</a>
             </li>
             <li class="nav-item">
                 <i class="bi bi-table"></i>
@@ -140,7 +140,7 @@
             </li>
             <li class="nav-item">
                 <i class="bi bi-table"></i>
-                <a class="nav-link" href="#">PR Requisitions</a>
+                <a class="nav-link" href="/PR-Requisitions.html">PR Requisitions</a>
             </li>
             <li class="nav-item">
                 <i class="bi bi-table"></i>
@@ -192,43 +192,13 @@
 
             </nav>
         </div>
-
+        
         <div class="list__container">
             <div class="table__container">
-                <table id="assets" class="table display">
+                <table id="assets" class="assets__table table">
                     <thead class="header__title">
-                        <tr>
-                            <th></th>
-                            <th>Number</th>
-                            <th>Asset Criticality</th>
-                            <th>image</th>
-                            <th>Asset Description</th>
-                            <th>Serial Number</th>
-                            <th>Model Number</th>
-                            <th>Building</th>
-                            <th>Manufacturer</th>
-                            <th>Available For Service</th>
-                            <th>Department</th>
-                            <th>Parent Asset</th>
-                            <th>Available status</th>
-                            <th>Asset ID</th>
-                            <th>Location Category</th>
-                            <th>Failure Class</th>
-                            <th>ABC Indicator</th>
-                            <th>Safety Critical Equipment</th>
-                            <th>EX/ATEX</th>
-                            <th>Business Criticality</th>
-                            <th>Enviromental Criticality</th>
-                            <th>Safety Criticality</th>
-                            <th>Production Criticality</th>
-                            <th>Planer Group</th>
-                            <th>Cost Center</th>
-                            <th>SRD flag</th>
-                        </tr>
-                    </thead>
-                    <thead class="header__filter">
-                        <tr>
-                            <th>
+                        <tr class="title">
+                            <th style="width: 40px;">
                                 <input type="checkbox">
                             </th>
                             <th>Number</th>
@@ -256,6 +226,34 @@
                             <th>Planer Group</th>
                             <th>Cost Center</th>
                             <th>SRD flag</th>
+                        </tr>
+                        <tr class="table__filter">
+                            <th style="color: transparent;"></th>
+                            <th><input type="text" placeholder="Number"></th>
+                            <th><input type="text" placeholder="Asset Criticality"></th>
+                            <th style="color: transparent; width: 150px;"></th>
+                            <th> <input type="text" placeholder="Asset Description"></th>
+                            <th><input type="text" placeholder="Serial Number"></th>
+                            <th><input type="text" placeholder="Model Number"></th>
+                            <th><input type="text" placeholder="Building"></th>
+                            <th><input type="text" placeholder="Manufacturer"></th>
+                            <th><input type="text" placeholder="Available For Service"></th>
+                            <th><input type="text" placeholder="Department"></th>
+                            <th><input type="text" placeholder="Parent Asset"></th>
+                            <th><input type="text" placeholder="Available status"></th>
+                            <th><input type="text" placeholder="Asset ID"></th>
+                            <th><input type="text" placeholder="Location Category"></th>
+                            <th><input type="text" placeholder="Failure Class"></th>
+                            <th><input type="text" placeholder="ABC Indicator"></th>
+                            <th><input type="text" placeholder="Safety Critical Equipment"></th>
+                            <th><input type="text" placeholder="EX/ATEX"></th>
+                            <th><input type="text" placeholder="Business Criticality"></th>
+                            <th><input type="text" placeholder="Enviromental Criticality"></th>
+                            <th><input type="text" placeholder="Safety Criticality"></th>
+                            <th><input type="text" placeholder="Production Criticality"></th>
+                            <th><input type="text" placeholder="Planer Group"></th>
+                            <th><input type="text" placeholder="Cost Center"></th>
+                            <th><input type="text" placeholder="SRD flag"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1040,6 +1038,36 @@
                             <td>Yes</td>
                         </tr>
                     </tbody>
+                    <!-- <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>Number</th>
+                            <th>Asset Criticality</th>
+                            <th>image</th>
+                            <th>Asset Description</th>
+                            <th>Serial Number</th>
+                            <th>Model Number</th>
+                            <th>Building</th>
+                            <th>Manufacturer</th>
+                            <th>Available For Service</th>
+                            <th>Department</th>
+                            <th>Parent Asset</th>
+                            <th>Available status</th>
+                            <th>Asset ID</th>
+                            <th>Location Category</th>
+                            <th>Failure Class</th>
+                            <th>ABC Indicator</th>
+                            <th>Safety Critical Equipment</th>
+                            <th>EX/ATEX</th>
+                            <th>Business Criticality</th>
+                            <th>Enviromental Criticality</th>
+                            <th>Safety Criticality</th>
+                            <th>Production Criticality</th>
+                            <th>Planer Group</th>
+                            <th>Cost Center</th>
+                            <th>SRD flag</th>
+                        </tr>
+                    </tfoot> -->
                 </table>
             </div>
         </div>

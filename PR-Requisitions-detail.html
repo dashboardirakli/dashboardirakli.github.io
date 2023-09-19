@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="topBar" class="topBar">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/dashboard.html">Maintance</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    </ul>
+
+                    <div class="d-flex user__menu">
+                        <li>
+                            <form class="searchForm" role="search">
+                                <i class="bi-search"></i>
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            </form>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-bell-fill"></i><span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    25+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-people-fill"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-gear-fill"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                                <li><a class="dropdown-item" href="#">View Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/index.html">LogOut</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="sideBar" class="sideBar" onmouseenter="expandSidebar()" onmouseleave="collapseSidebar()">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link active" aria-current="page" href="/dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Reports</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Sheduler</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Aproval Groups</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Assets</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Assigments</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Contacts</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Interactive Plans</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/PR-Requisitions.html">PR Requisitions</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="#">Parts</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Po Purchase Orders</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Shipping Addresses</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">PM Plans</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Supplier</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Tax Rates</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Work Orders</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/assets.html">Work Order Requests</a>
+            </li>
+            <li class="nav-item">
+                <i class="bi bi-table"></i>
+                <a class="nav-link" href="/library.html">Task Library</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="content" class="content__body">
+        <div class="container-fluid datails">
+            <div class="breadcrumb__container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" id="breadcrumbs"></ol>
+                </nav>
+            </div>
+
+            <div class="list__container">
+                <div class="datails__container">
+                    <div class="item__detail__header">
+                        <div class="item__Info">
+                            <div class="item__description__info">
+                                <div class="item__img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="item__description__title">
+                                    <div class="assets__serialnumber">
+                                        <span class="number-label">Number:</span>
+                                        <div class="number__value">
+                                            <div class="label-widget">1234</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item__Date">
+                                <ul class="item__Date__list">
+                                    <li class="createdOn">
+                                        <div class="txt__label">Created On</div>
+                                        <div class="txt__value">
+                                            <div class="created__Date">
+                                                28-07-2023 11:44:41
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="updatedOn">
+                                        <div class="txt__label">Updated On</div>
+                                        <div class="txt__value">
+                                            <div class="created__Date">
+                                                28-07-2023 11:44:41
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="details__menu">
+                        <ul class="nav nav-pills mb-3">
+                            <li>
+                                <a class="nav-link active" data-bs-toggle="pill" href="#GeneralInformation">General
+                                    Information</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-bs-toggle="pill" href="#AuditTrail">Audit Trail</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content forLibrary">
+                            <div class="tab-pane fade show active" id="GeneralInformation">
+                                <div class="row generalInfo__container">
+                                    <div class="col-sm-12">
+                                        <div class="item__title">Parts Requisition items</div>
+                                        <table id="partRequisition" class="partRequisition display">
+                                            <thead>
+                                                <tr>
+                                                    <th>(Short Text) MMID</th>
+                                                    <th>Short Text</th>
+                                                    <th>(Short Text) Full Description</th>
+                                                    <th>(Short Text) Certificate Information</th>
+                                                    <th>Quantity</th>
+                                                    <th>Status</th>
+                                                    <th>(Short Text) GL Account</th>
+                                                    <th>Part Supplier</th>
+                                                    <th>(Short Text) Manufacturer</th>
+                                                    <th>(Short Text) Manufacturer Part number</th>
+                                                    <th>(Short Text) Unit of Measure</th>
+                                                    <th>Estimated Cost</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>400000003000340</td>
+                                                    <td><a href="">Core inspection programme</a></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>108000</td>
+                                                    <td>Approved</td>
+                                                    <td>51001013</td>
+                                                    <td><a href="">Oceaneering International Service</a></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td><a href="">other</a></td>
+                                                    <td>$ 0.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-sm-12 requisition__datails">
+                                        <div class="item__title">Details</div>
+                                        <table class="library__generalInfo__table">
+                                            <tbody>
+                                                <tr class="Requisitio__Title">
+                                                    <td class="only-label">Requisition Title</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">Vibration Monitoring</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="comments">
+                                                    <td class="only-label">Comments</td>
+                                                    <td class="only-value">
+                                                        <div class="text-editor only">
+                                                            <textarea class="Requisition__textera"></textarea>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Notify__Approver">
+                                                    <td class="only-label">Notify Approver Group Owner?</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">Yes</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Requested__By">
+                                                    <td class="only-label">Requested By</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">Davit Davitadze</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Approval__Group">
+                                                    <td class="only-label">Approval Group</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">SCP Engineering Manager Geo</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Approval__Cost">
+                                                    <td class="only-label">Approval Cost Center</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">2444001</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="SAP__Code">
+                                                    <td class="only-label">SAP Code</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">F244DGSPT17</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="SAP__Code__Description">
+                                                    <td class="only-label">SAP Code Description</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">SPT_GEEngin\OPEX_SES\Core inspection programme</div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="Comments">
+                                                    <td class="only-label">Comments</td>
+                                                    <td class="only-value">
+                                                        <div class="label-widget">*************</div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!-- End GeneralInformation Content -->
+
+                            <div class="tab-pane fade show" id="AuditTrail">
+                                <div class="row audit-trail">
+                                    <div class="col-sm-12 audit__trail__container">
+                                        <div class="audit__trail__border">
+                                            <ul class="nav nav-pills3">
+                                                <div class="event__list__header">
+                                                    <h5 class="event__list__title">Events</h5>
+                                                    <a href="" class="btn__download__events">Download Full
+                                                        Audit Trail</a>
+                                                </div>
+                                                <li>
+                                                    <a class="nav-link-record active" data-bs-toggle="pill"
+                                                        href="#item1" query="[object Object]">
+                                                        <div class="event__list__item__title">Created [Task Procedures]
+                                                        </div>
+                                                        <div class="event__list__item__value">by Giorgi Giorgadze on
+                                                            July 28th, 2023 11:44:41 AM</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link-record" data-bs-toggle="pill" href="#item2"
+                                                        query="[object Object]">
+                                                        <div class="event__list__item__title">Created [Task Labor]</div>
+                                                        <div class="event__list__item__value">by Giorgi Giorgadze on
+                                                            July 28th, 2023 11:44:41 AM</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link-record" data-bs-toggle="pill" href="#item3"
+                                                        query="[object Object]">
+                                                        <div class="event__list__item__title-main-entity">Created</div>
+                                                        <div class="event__list__item__value">by Giorgi Giorgadze on
+                                                            July 28th, 2023 11:44:41 AM</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link-record" data-bs-toggle="pill" href="#item4"
+                                                        query="[object Object]">
+                                                        <div class="event__list__item__title">Created [Task Labor]</div>
+                                                        <div class="event__list__item__value">by Giorgi Giorgadze on
+                                                            July 28th, 2023 11:44:41 AM</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link-record" data-bs-toggle="pill" href="#item5"
+                                                        query="[object Object]">
+                                                        <div class="event__list__item__title">Created [Task Procedures]
+                                                        </div>
+                                                        <div class="event__list__item__value">by Giorgi Giorgadze on
+                                                            July 28th, 2023 11:44:41 AM</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tab-content forAuditTrial">
+                                            <div class="tab-pane fade show active" id="item1">
+                                                <div class="event__details">
+                                                    <div class="event__content">
+                                                        <div class="record__view">
+                                                            <legend>Created record fields</legend>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Hours</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">1</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Step</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">ELECTRICAL SUPPORT FOR
+                                                                        INSPECTION
+                                                                        AND SERVICE-ELEC</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">order</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">2</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Procedure Type</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">Completable</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row detail__row">
+                                                            <div class="col-md-4 detail__label">Updated Sync Date</div>
+                                                            <div class="col-md-8 detail__value">
+                                                                <div class="label__widget">28-07-2023 11:44:42</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End item1 Content -->
+
+                                            <div class="tab-pane fade show" id="item2">
+                                                <div class="event__details">
+                                                    <div class="event__content">
+                                                        <div class="record__view">
+                                                            <legend>Created record fields second</legend>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Hours</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">1</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Step</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">ELECTRICAL SUPPORT FOR
+                                                                        INSPECTION
+                                                                        AND SERVICE-ELEC</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">order</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">2</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Procedure Type</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">Completable</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row detail__row">
+                                                            <div class="col-md-4 detail__label">Updated Sync Date</div>
+                                                            <div class="col-md-8 detail__value">
+                                                                <div class="label__widget">28-07-2023 11:44:42</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End item2 Content -->
+
+                                            <div class="tab-pane fade show" id="item3">
+                                                <div class="event__details">
+                                                    <div class="event__content">
+                                                        <div class="record__view">
+                                                            <legend>Created record fields 3</legend>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Hours</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">1</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Step</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">ELECTRICAL SUPPORT FOR
+                                                                        INSPECTION
+                                                                        AND SERVICE-ELEC</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">order</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">2</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row detail__row">
+                                                                <div class="col-md-4 detail__label">Procedure Type</div>
+                                                                <div class="col-md-8 detail__value">
+                                                                    <div class="label__widget">Completable</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="row detail__row">
+                                                            <div class="col-md-4 detail__label">Updated Sync Date</div>
+                                                            <div class="col-md-8 detail__value">
+                                                                <div class="label__widget">28-07-2023 11:44:42</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- End item1 Content -->
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div><!-- End Other Content -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/scroller/2.0.6/js/dataTables.scroller.min.js"></script>
+    <script src="./js/PR_Requisitions.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

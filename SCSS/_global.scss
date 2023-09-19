@@ -1,3 +1,7 @@
+/*============================================================
+	global
+==============================================================*/
+
 * {
     box-sizing: border-box;
     outline: none !important;
@@ -77,6 +81,7 @@ body {
 }
 
 .breadcrumb__container {
+    padding-top: 10px;
     height: 36px;
     background: $light;
 }
