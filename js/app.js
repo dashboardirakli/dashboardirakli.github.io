@@ -6,6 +6,7 @@ function collapseSidebar() {
     document.getElementById("sideBar").classList.remove("show");
 }
 
+// breadcrumbs //
 document.addEventListener("DOMContentLoaded", function () {
     var currentPathname = window.location.pathname;
     var pathnameSegments = currentPathname.split('/');

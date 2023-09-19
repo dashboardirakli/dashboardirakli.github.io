@@ -8,31 +8,22 @@ new DataTable('#library', {
     initComplete: function () {
         this.api()
             .columns()
-            .every(function (index) {
+            .every(function () {
+                select.style.width = '100px';
                 let column = this;
+                let title = column.header().textContent;
 
-                if (index !== 0) {
-                    let select = document.createElement('select');
-                    select.style.width = '100px';
-                    select.add(new Option(''));
-                    column.header().replaceChildren(select);
+                // Create input element
+                let input = document.createElement('input');
+                input.placeholder = title;
+                column.header().replaceChildren(input);
 
-                    select.addEventListener('change', function () {
-                        var val = DataTable.util.escapeRegex(select.value);
-
-                        column
-                            .search(val ? '^' + val + '$' : '', true, false)
-                            .draw();
-                    });
-
-                    column
-                        .data()
-                        .unique()
-                        .sort()
-                        .each(function (d, j) {
-                            select.add(new Option(d));
-                        });
-                }
+                // Event listener for user input
+                input.addEventListener('keyup', () => {
+                    if (column.search() !== this.value) {
+                        column.search(input.value).draw();
+                    }
+                });
             });
 
         $('thead.header__title tr th:first-child').css('width', '40px');
